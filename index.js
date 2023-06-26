@@ -6,6 +6,7 @@ let firstName ='sumit';
 let age=21;
 let student=false;
 
+// ------------------------- inputs and access ------------------------- 
 
 // print to the console
 console.log('name: ',firstName,"age: ",age,'is student: ',student);
@@ -29,7 +30,7 @@ document.getElementById("submit").onclick = function(){
     document.getElementById("todo1").innerHTML = todo;
 }
 
-// Type concersion 
+// -------------------------------- Type concersion -------------------------------- 
 
 let height = window.prompt("enter your height");;
 console.log(typeof height)
@@ -43,9 +44,10 @@ console.log(typeof height)
 height = Boolean(height)
 console.log(typeof height)
 
-// math functions
+
+//  --------------------------------  math functions -------------------------------- 
 // pi constant
-pi = Math.PI()
+let pi = Math.PI
 
 // round fucntions round --> ceil --> floor
 
@@ -74,6 +76,56 @@ console.log(num3)
 
 // projects
 
-// simple counter
-// 3 dice roller program
-// hypotenuse calc practice program
+// simple counter done
+// 3 dice roller program done
+// hypotenuse calc practice program  done
+
+
+// 
+// ----------------------- string manupulations ----------------------- 
+// 
+
+
+let userName = '  sumit D Saini   ';
+
+// remove empty space from string 
+userName = userName.trim()
+
+// change casing of a string
+userName = userName.toUpperCase();
+userName = userName.toLowerCase();
+
+//  replace in string 
+userName =userName.replace('d','R')
+
+console.log(userName)
+
+// length of a string
+console.log(userName.length);
+// accessing characters in a strings
+console.log(userName.charAt(0)) 
+// get index of a charcter
+console.log(userName.indexOf('o'))
+console.log(userName.lastIndexOf('i'))
+
+// silce a string based on index
+fname = userName.slice(0,5)
+lname = userName.slice(8)
+
+console.log(fname,lname)
+
+// 
+// ----------------------- if else ----------------------- 
+// 
+
+let condition = height
+
+if(condition>12){
+    console.log('condition exist')
+}
+else if(condition<0){
+    console.log("condition doesn't exist")
+}
+else {
+    console.log("condition is scrued")
+}
