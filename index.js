@@ -76,7 +76,7 @@ let num3 = Math.pow(num1,num2)
 console.log(num3)
 
 // 
-// ----------------------- string manupulations ----------------------- 
+// ----------------------- string manipulations ----------------------- 
 // 
 
 
@@ -294,3 +294,110 @@ function sum(...numbers){
 // 
 // ----------------------- callbacks ----------------------- 
 //
+
+// callbacks = a function passed as an argument
+//             to another function 
+
+// benefits 
+// ensures that a function is not going 
+// to run before a task is completed
+// helps is develop asynchronous code
+// when one function has to wait for another function
+// helps to avoid errors and other problems
+// Ex. wait for a file to load and do something
+
+let total = tot(2,3,displayDom);
+
+function tot(x,y,callback){
+    let result = x+y;
+    callback(result)
+}
+
+function displayConsole(output){
+    console.log(output)
+}
+
+function displayDom(output){
+    document.getElementById('myLabel').innerText = output;
+}
+
+
+// 
+// ----------------------- array.forEach()  ----------------------- 
+//
+
+// array.forEach() = executes a provided 
+//                   callback function once for each array element
+
+let students = ['patrick','squidward','spongebob'];
+// students.forEach(capitalize)
+students.forEach(displayConsole)
+
+
+function capitalize(element){
+    return element[0].toUpperCase() + element.substring(1);
+}
+
+
+// 
+// ----------------------- array.map()  ----------------------- 
+//
+
+// array.map() = executes a provided callback function 
+//               once for each array element
+//               and create a new array
+
+let upperStudents = students.map(capitalize)
+upperStudents.forEach(displayConsole)
+
+// 
+// ----------------------- array.filter()  ----------------------- 
+//
+
+// array.filter() = creates a new array with all elements
+//                  that pass the test provided by a function
+
+let ages = [12,13,18,19,22,33,43,1,2,7,8]
+let adults = ages.filter(checkAge)
+
+adults.forEach(displayConsole)
+
+function checkAge(element){
+    return element >=18
+}
+
+// 
+// ----------------------- array.reduce()  ----------------------- 
+//
+
+// array.reduce() = reduce an array to single value
+
+let totalPrice = prices.reduce(checkOut)
+
+console.log(totalPrice)
+
+function checkOut(total,element){
+    return total + element
+}
+
+// 
+// ----------------------- array sorting   ----------------------- 
+//
+
+let grades = [55,25,44,60,63,64,35,51]
+
+function descendingOrder(x,y){
+    return y-x
+}
+
+grades = grades.sort(descendingOrder)
+
+grades.forEach(displayConsole)
+
+
+function ascendingOrder(x,y){
+    return x-y
+}
+grades = grades.sort(ascendingOrder)
+
+grades.forEach(displayConsole)
