@@ -30,7 +30,7 @@ document.getElementById("submit").onclick = function(){
     document.getElementById("todo1").innerHTML = todo;
 }
 
-// -------------------------------- Type concersion -------------------------------- 
+// ------------------------- Type conversion ------------------------- 
 
 // let height = window.prompt("enter your height");;
 let height = 1
@@ -46,7 +46,7 @@ height = Boolean(height)
 console.log(typeof height)
 
 
-//  --------------------------------  math functions -------------------------------- 
+//  -------------------------  math functions ------------------------- 
 // pi constant
 let pi = Math.PI
 
@@ -76,7 +76,7 @@ let num3 = Math.pow(num1,num2)
 console.log(num3)
 
 // 
-// ----------------------- string manipulations ----------------------- 
+// ------------------------- string manipulations ------------------------- 
 // 
 
 
@@ -109,7 +109,7 @@ lname = userName.slice(8)
 console.log(fname,lname)
 
 // 
-// ----------------------- if else ----------------------- 
+// ------------------------- if else ------------------------- 
 // 
 
 let condition = height
@@ -125,7 +125,7 @@ else {
 }
 
 // 
-// ----------------------- Ternary operators ----------------------- 
+// ------------------------- Ternary operators ------------------------- 
 // 
 
 let adult = 21
@@ -136,7 +136,7 @@ console.log(personAge)
 
 
 // 
-// ----------------------- checked property ----------------------- 
+// ------------------------- checked property ------------------------- 
 //
 
 document.getElementById('myButton').onclick = function(){
@@ -173,7 +173,7 @@ document.getElementById('cardBtn').onclick = function(){
 }
 
 // 
-// ----------------------- toLocalString() ----------------------- 
+// ------------------------- toLocalString() ------------------------- 
 //
 
 // let myNum =  456232.635
@@ -193,7 +193,7 @@ document.getElementById('cardBtn').onclick = function(){
 // console.log(myNum)
 
 // 
-// ----------------------- arrays ----------------------- 
+// ------------------------- arrays ------------------------- 
 //
 
 // arrays = A variable that can have multiple values
@@ -221,7 +221,7 @@ console.log(fruits.indexOf('orange'))
 
 
 // 
-// ----------------------- loop on  arrays ----------------------- 
+// ------------------------- loop on  arrays ------------------------- 
 //
 
 let prices = [22,23,2,1,12,34,32]
@@ -241,7 +241,7 @@ fruits = fruits.sort();
 
 
 // 
-// ----------------------- 2d arrays ----------------------- 
+// ------------------------- 2d arrays ------------------------- 
 //
 
 let vegetables = ['carrots','onions','potatoes']
@@ -251,7 +251,7 @@ let groceryList = [fruits,vegetables,meats]
 console.log(groceryList)
 
 // 
-// ----------------------- spread operation ----------------------- 
+// ------------------------- spread operation ------------------------- 
 //
 
 // spread operation: allows an iterable such as an 
@@ -266,64 +266,11 @@ console.log(...numbers)
 console.log(Math.max(...numbers))
 
 
-// 
-// ----------------------- reset parameters ----------------------- 
-//
 
-
-// rest parameters: represents an indefinite number of parameters 
-//                  (packs arguments into an array )
-
-let a =1;
-let b=2;
-let c=3;
-let d=4;
-let e=5;
-
-console.log(sum(a,b,c))
-
-
-function sum(...numbers){
-    let total = 0;
-    for(let number of numbers){
-        total += number
-    }
-    return total
-}
-
-// 
-// ----------------------- callbacks ----------------------- 
-//
-
-// callbacks = a function passed as an argument
-//             to another function 
-
-// benefits 
-// ensures that a function is not going 
-// to run before a task is completed
-// helps is develop asynchronous code
-// when one function has to wait for another function
-// helps to avoid errors and other problems
-// Ex. wait for a file to load and do something
-
-let total = tot(2,3,displayDom);
-
-function tot(x,y,callback){
-    let result = x+y;
-    callback(result)
-}
-
-function displayConsole(output){
-    console.log(output)
-}
-
-function displayDom(output){
-    document.getElementById('myLabel').innerText = output;
-}
 
 
 // 
-// ----------------------- array.forEach()  ----------------------- 
+// ------------------------- array.forEach()  ------------------------- 
 //
 
 // array.forEach() = executes a provided 
@@ -340,7 +287,7 @@ function capitalize(element){
 
 
 // 
-// ----------------------- array.map()  ----------------------- 
+// ------------------------- array.map()  ------------------------- 
 //
 
 // array.map() = executes a provided callback function 
@@ -351,7 +298,7 @@ let upperStudents = students.map(capitalize)
 upperStudents.forEach(displayConsole)
 
 // 
-// ----------------------- array.filter()  ----------------------- 
+// ------------------------- array.filter()  ------------------------- 
 //
 
 // array.filter() = creates a new array with all elements
@@ -367,7 +314,7 @@ function checkAge(element){
 }
 
 // 
-// ----------------------- array.reduce()  ----------------------- 
+// ------------------------- array.reduce()  ------------------------- 
 //
 
 // array.reduce() = reduce an array to single value
@@ -381,7 +328,7 @@ function checkOut(total,element){
 }
 
 // 
-// ----------------------- array sorting   ----------------------- 
+// ------------------------- array sorting   ------------------------- 
 //
 
 let grades = [55,25,44,60,63,64,35,51]
